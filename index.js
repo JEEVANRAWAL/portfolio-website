@@ -48,3 +48,11 @@ function typeWriter2(){
 
 
 typeWriter2();
+
+
+// for toggle hammburger nav bar for mobile
+
+function onClickMenu(){
+  document.getElementById("menu").classList.toggle("icon");
+  document.getElementById("nav").classList.toggle("change");
+}

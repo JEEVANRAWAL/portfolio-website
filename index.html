@@ -5,23 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/53e0b2d3d8.js" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+    <title>Jeevan's Portfolio</title>
 </head>
 <body>
     <div class="container">
         <img src="image/logo-png1.png" alt="">
-        <nav>
+        <nav id="nav-bar">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
+                <li><a href="#about_section">About</a></li>
+                <li><a href="#resume-section">resume</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#portfolio_section">Portfolio</a></li>
+                <li><a href="#contact-section">contact</a></li>
             </ul>
         </nav>
+
+        <!-- nav bar for mobile -->
+        <div class="navbar-mobile">
+            <div id="menu" class="menu" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+    
+            <ul class="nav" id="nav">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about_section">About</a></li>
+                <li><a href="#resume-section">resume</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#portfolio_section">Portfolio</a></li>
+                <li><a href="#contact-section">contact</a></li>
+            </ul>
+        </div>
     </div>
 
+
     <div class="main">
-        <div class="intro">
+        <div class="intro" id="intro">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
@@ -31,7 +52,7 @@
                 <span class="shrt-intro2"></span>
 
                 <div class="buttons">
-                    <button class="btn-cv">Download CV</button>
+                    <button class="btn-cv"><a href="file/Jeevan_rawal_cv.pdf" target="_blank" title="Download_CV">Download CV</a></button>
                     <button class="btn-coffee">Coffee</button>
                 </div>
             </div>
@@ -41,7 +62,7 @@
             </div>
         </div>
         
-        <div class="about_section">
+        <div class="about_section" id="about_section">
             <h4>ABOUT ME</h4>
             <div class="about">
                 <div class="imageBox">
@@ -49,13 +70,13 @@
                 </div>
                 
                 <div class="aboutDetails">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum neque iusto beatae ipsum pariatur labore culpa eveniet alias quaerat animi earum quod ratione eum voluptatum, itaque facilis libero, voluptate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate repellat sed, possimus earum optio sapiente autem temporibus repellendus recusandae tempore harum pariatur laborum nam qui ex dolorem blanditiis asperiores neque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam sunt, eum earum voluptatum distinctio ab tempora fuga dolores saepe esse culpa omnis illum at officia. Aperiam, exercitationem ad. Ad voluptas voluptate id.</p>
+                    <p>I am Jeevan Rawal, originally from Kailali, Nepal, and currently residing in the vibrant city of Kathmandu. As a web developer by profession, I am deeply passionate about problem-solving and thrive on the challenge of staying ahead in the dynamic field of technology. Living at the intersection of creativity and functionality, I find joy in crafting innovative web solutions. My journey is fueled by a genuine interest in learning and staying updated with new technologies. Whether it's untangling complex coding issues or immersing myself in the intricacies of emerging tools, I enjoy the continuous process of growth and discovery within the ever-evolving landscape of web development.</p>
                 </div>
             </div>
         </div>
 
-        <div class="resume_section">
-            <h4 style="padding-right: 37px;">RESUME</h4>
+        <div class="resume_section" id="resume-section">
+            <h4>My RESUME</h4>
             <div class="resume-title">
                 <h3 >Education</h3>
                 <h3 >Experience</h3>
@@ -101,7 +122,7 @@
             </div>
         </div>
 
-        <div class="skills-section">
+        <div class="skills-section" id="skills-section">
             <h4>My Skills</h4>
             <div class="skills">
                 <div class="skills-item">
@@ -176,7 +197,7 @@
             </div>
         </div>
 
-        <div class="portfolio_section">
+        <div class="portfolio_section" id="portfolio_section">
             <h4>PORTFOLIO</h4>
             <div class="portfolio">
                 <div class="content-box">
@@ -228,6 +249,65 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="contact_section" id="contact-section">
+            <h4>CONTACT</h4>
+            <div class="contact">
+                <form action="#" method="post">
+                    <!-- <label for="">Name</label> -->
+                    <input type="text" name="name" class="inputarea" id="name" value="" placeholder="Name">
+    
+                    <!-- <label for="">Email</label> -->
+                    <input type="text" name="email" class="inputarea" value="" placeholder="Email">
+    
+                    <input type="text" name="subject" class="inputarea" id="subject" value="" placeholder="subject">
+    
+                    <!-- <label for="">Message</label> -->
+                    <textarea name="message" class="inputarea" id="message" cols="30" rows="10" placeholder="message"></textarea>
+                    
+                    <input type="submit" value="send message" id="submit">
+                </form>
+
+                <div class="contact-info">
+                    <span class="contact-title1">contact info</span>
+                    <div class="contName_icon cont-item">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Jeevan Rawal</span>
+                    </div>
+
+                    <div class="contLocation_icon cont-item">
+                        <i class="fa-solid fa-location-arrow"></i>
+                        <span>Kathmandu, Nepal</span>
+                    </div>
+
+                    <div class="contLocation_icon cont-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>rawaljeevan123@gmail.com</span>
+                    </div>
+
+                    <span class="contact-title2">Social Media</span>
+                    <div class="socialMedia">
+                        <div class="socialmedia_icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+    
+                        <div class="socialmedia_icon">
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+    
+                        <div class="socialmedia_icon">
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="made_by">
+                        <span>Made By Jeevan Rawal</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>

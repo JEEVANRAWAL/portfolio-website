@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -28,6 +32,10 @@ body{
 .container nav{
 
     /* background-color: red; */
+}
+
+.navbar-mobile{
+    display: none;
 }
 
 .container nav ul{
@@ -93,6 +101,11 @@ body{
     border-radius: 20px;
     border: none;
     transition: all 0.3s ease;
+}
+
+.btn-cv a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .main .intro .info-div .buttons .btn-coffee{
@@ -416,6 +429,133 @@ background-color: aqua;
     color: AliceBlue ;
 }
 
+.main .contact_section{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    background-color: rgb(2, 2, 63);
+}
+
+.main .contact_section form{
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: 45px;
+    margin: 80px 0px 60px 0px;
+}
+
+form #subject{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+form #message{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+form #submit{
+    border-radius: 25px 0px 25px 0px;
+    background-color:#cd2929;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    transition: all 300ms ease-in-out;
+}
+
+form #submit:hover{
+    border-radius: 0px;
+    background-color: #961313;
+}
+
+form .inputarea{
+    border-radius: 5px;
+    border: none;
+}
+
+form input{
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+.main .contact_section .contact{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 250px 0 250px;
+}
+
+.main .contact_section .contact .contact-info{
+    width: 35%;
+    height: 450px;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-top: 80px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+.main .contact_section .contact .contact-info span{
+    font-family: Consolas, monospace;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.main .contact_section .contact .contact-info i{
+    font-size: 23px;
+    color: #fff;
+}
+
+.contact-info .cont-item{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.contact-info .contact-title1{
+    
+}
+
+.main .contact_section .contact .contact-info .socialmedia_icon i{
+    font-size: 40px;
+}
+
+.main .contact_section .contact .contact-info .socialmedia_icon a{
+    text-decoration: none;
+}
+
+.main .contact_section .contact .contact-info .socialMedia{
+    display: flex;
+    margin-top: 15px;
+}
+
+.main .contact_section .contact .contact-info .socialMedia .socialmedia_icon{
+    margin-left: 15px;
+}
+
+.main .contact_section .made_by{
+    margin-top: 40px;
+}
+
+.main .contact_section .made_by span{
+    font-family: Consolas, monospace;
+    color: #fff;
+    font-size: 20px;
+}
+
 
 
 /* stars animation */
@@ -511,19 +651,122 @@ background-color: aqua;
     .container{
         width: 100%;
         padding-top: 20px;
-        justify-content: none;
+        padding-left: 20px;
+        padding-right: 60px;
+        justify-content: space-between;
         /* background-color: #cd2929; */
     }
 
     .container img{
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .container #nav-bar{
+      display: none;
+    }
+
+    .navbar-mobile{
+        display: block;
+        margin-top: 8px;
+    }
+
+    #menu{
         width: 30px;
-        height: 30px;
+        height: 13px;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+        position: fixed;
+        margin-right: 30px;
+    }
+
+    #menu .bar{
+        height: 3px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: 0.3s ease;
+    }
+
+    #menu #bar1{
+        transform: translateY(-4px);
+    }
+
+    #menu #bar3{
+        transform: translateY(4px);
+    }
+
+    .navbar-mobile .nav{
+        transition: 1s ease;
+        display: none;
+    }
+
+    .navbar-mobile .nav li a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar-mobile .nav li a:hover{
+        border: 1px solid #fff;
+    }
+
+    .navbar-mobile .nav li{
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    .navbar-mobile .icon .bar{
+        height: 3px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        background-color: red;
+        transition: 0.3s ease;
+    }
+
+    .container .navbar-mobile .icon #bar1{
+        transform: translateY(6px) rotate(45deg);
+        transform-origin: center;
+    }
+
+    .container .navbar-mobile .icon #bar3{
+        transform: translateY(-6px) rotate(-45deg);
+        transform-origin: center;
+    }
+
+    .navbar-mobile .icon #bar2{
+    
+    }
+
+    .navbar-mobile .change{
+        background-color: darkorange;
+        height: 50vh;
+        margin: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 3;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .container nav ul{
+        width: 100%;
+        background-color: #961313;
     }
 
     .container nav ul li{
         font-size: 15px;
         margin-left: 3px;
         margin-right: 10px;
+        width: 100%;
     }
 
     .container nav ul li a{
@@ -531,6 +774,8 @@ background-color: aqua;
     }
 
     .main .intro{
+        width: 100vw;
+        height: 100vh;
         justify-content: none;
         flex-direction: column;
     }
@@ -561,7 +806,7 @@ background-color: aqua;
     }
 
     .main .intro .imageBox{
-        width: 100%;
+        width: 100vw;
         height: 65%;
         margin-left:0px;
         margin-top: 20px;
@@ -573,7 +818,7 @@ background-color: aqua;
     }
 
     h4{
-        width: 100px;
+        width: 110px;
         /* background-color: #cd2929; */
         font-size: 15px;
     }
@@ -617,8 +862,8 @@ background-color: aqua;
     .main .about_section .about .aboutDetails{
         display: flex;
         padding-top: 50px;
-        padding-left: 9px;
-        padding-right: 9px;
+        padding-left: 15px;
+        padding-right: 15px;
         line-height: 27px;
         letter-spacing: 1px;
         text-align: justify;
@@ -647,12 +892,70 @@ background-color: aqua;
         font-size: 25px;
     }
 
+    .skills-section .skills{
+        width: 100%;
+        padding: 0 15% 0 15%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .main .contact_section form{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 100%));
+        grid-gap: 20px;
+        grid-auto-rows: 45px;
+        margin: 80px 0px 60px 0px;
+        padding: 0 20px;
+    }
+
+    form #subject{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    form #message{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        padding-left: 15px;
+        font-size: 17px;
+    }
+    
+    .main .contact_section .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main .contact_section .contact .contact-info{
+        width: 100%;
+        height: 450px;
+        padding-top: 20px;
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main .contact_section .contact .contact-info span{
+        font-family: Consolas, monospace;
+        font-size: 16px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .main .contact_section .contact .contact-info .socialmedia_icon i{
+        font-size: 30px;
+    }
+    
+
 
 }
 
 /* breakpoint for small screen devices  */
 
-@media(min-width: 600px) and (max-width: 850px){
+@media(min-width: 601px) and (max-width: 767px){
     .container{
         width: 100%;
         padding-top: 20px;
@@ -743,6 +1046,373 @@ background-color: aqua;
     .main .portfolio_section .portfolio .content-box{
         margin: auto;
         margin-bottom:40px;
+    }
+
+    .main .resume_section .resume-title{
+        width: 50%;
+    }
+    
+    .skills-section .skills{
+        width: 100%;
+        padding: 0 15% 0 15%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .main .contact_section form{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+        grid-gap: 20px;
+        grid-auto-rows: 45px;
+        margin: 80px 0px 60px 0px;
+        padding: 0 20px;
+    }
+
+    .main .contact_section .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    .main .contact_section .contact .contact-info{
+        width: 80%;
+        height: 450px;
+        padding-top: 20px;
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main .contact_section .contact .contact-info span{
+        font-family: Consolas, monospace;
+        font-size: 30px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .main .contact_section .contact .contact-info .socialmedia_icon i{
+        font-size: 50px;
+    }
+}
+
+/* breakpoint for medium devices  */
+
+@media(min-width: 768px) and (max-width: 991px){
+    .container{
+        width: 100VW;
+        padding-top: 20px;
+        justify-content: none;
+    }
+
+    .container img{
+        width: 10%;
+        height: 72px;
+    }
+
+    .container nav ul li{
+        font-size: 25px;
+        margin-left: 6px;
+        margin-right: 18px;
+    }
+
+    .container nav ul li a{
+        font-size: 21px;
+    }
+
+    .main .intro{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .main .intro .info-div{
+        margin-top: 35%;
+        margin-left: 3%;
+        padding-top: 40px;
+        padding-left: 20px;
+        width: 30%;
+    }
+
+    .main .intro .imageBox{
+        width: 70%;
+        height: 60%;
+        margin-left: 36%;
+        margin-top: 100px;
+        box-shadow: inset 0px 0px 60px 60px rgba(0,0,0,1);;
+    }
+
+    .main .about_section{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .main .about_section .about{
+        flex-direction: column;
+        justify-content: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .about_section .about .imageBox{
+        width: 70%;
+        height: 60%;
+        margin-left: 13%;
+        margin-top: 20px;
+        box-shadow: inset 0px 0px 80px 90px rgb(255, 255, 255);
+    }
+
+    .main .about_section .about .aboutDetails{
+        display: flex;
+        padding-top: 35px;
+        padding-left: 40px;
+        padding-right: 40px;
+        line-height: 27px;
+        letter-spacing: 1px;
+        text-align: justify;
+        width: 100%;
+        height: 40%;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .main .about_section .about .aboutDetails p{
+        font-size: 21px;
+    }
+
+    .main .portfolio_section .portfolio{
+        width: 100%;
+        padding: 50px 30px 12px 30px;
+    }
+
+    .main .portfolio_section .portfolio .content-box{
+        margin: auto;
+        margin-bottom:40px;
+    }
+
+    .main .resume_section .resume-title{
+        width: 50%;
+    }
+
+    .skills-section .skills{
+        width: 100%;
+        padding: 0 15% 0 15%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .main .contact_section form{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+        grid-gap: 20px;
+        grid-auto-rows: 45px;
+        margin: 80px 0px 60px 0px;
+        padding: 0 20px;
+    }
+
+    .main .contact_section .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    .main .contact_section .contact .contact-info{
+        width: 80%;
+        height: 450px;
+        padding-top: 20px;
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main .contact_section .contact .contact-info span{
+        font-family: Consolas, monospace;
+        font-size: 30px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .main .contact_section .contact .contact-info .socialmedia_icon i{
+        font-size: 50px;
+    }
+
+}
+
+/* breakpoint for large devices */
+@media(min-width: 992px) and (max-width: 1200px){
+    .container{
+        width: 100VW;
+        padding-top: 25px;
+        justify-content: none;
+    }
+
+    .container img{
+        width: 10%;
+        height: 80px;
+    }
+
+    .container nav ul li{
+        font-size: 50px;
+        margin-left: 9px;
+        margin-right: 20px;
+    }
+
+    .container nav ul li a{
+        font-size: 27px;
+    }
+
+    .main .intro{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .main .intro{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .main .intro .info-div{
+        margin-top: 35%;
+        margin-left: 3%;
+        padding-top: 40px;
+        padding-left: 20px;
+        width: 30%;
+    }
+
+    .main .intro .imageBox{
+        width: 70%;
+        height: 60%;
+        margin-left: 36%;
+        margin-top: 100px;
+        box-shadow: inset 0px 0px 60px 60px rgba(0,0,0,1);;
+    }
+
+    .main .intro .info-div span{
+        font-size: 25px;
+    }
+
+    .main .intro .info-div .shrt-intro2{
+        font-size: 19px;
+    }
+
+    .main .about_section{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .main .about_section .about{
+        flex-direction: column;
+        justify-content: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .about_section .about .imageBox{
+        width: 70%;
+        height: 60%;
+        margin-left: 13%;
+        margin-top: 20px;
+        box-shadow: inset 0px 0px 80px 90px rgb(255, 255, 255);
+    }
+
+    .main .about_section .about .aboutDetails{
+        display: flex;
+        padding-top: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        line-height: 27px;
+        letter-spacing: 1px;
+        text-align: justify;
+        width: 100%;
+        height: 40%;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .main .about_section .about .aboutDetails p{
+        font-size: 24px;
+    }
+
+    .main .portfolio_section .portfolio{
+        width: 100%;
+        padding: 50px 30px 12px 30px;
+    }
+
+    .main .portfolio_section .portfolio .content-box{
+        margin: auto;
+        margin-bottom:40px;
+    }
+
+    .main .resume_section .resume-title{
+        width: 50%;
+    }
+
+    .resume-title h3{
+        font-size: 40px;
+    }
+
+    .education_item h2{
+        font-size: 22px;
+    }
+
+    .education_item span{
+        font-size: 18px;
+    }
+
+    .experience_item h2{
+        font-size: 22px;
+    }
+    
+    .experience_item span{
+        font-size: 18px;
+    }
+
+    .skills-section .skills{
+        width: 100%;
+        padding: 0 15% 0 15%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    /* .main .contact_section{
+
+    } */
+    .main .contact_section form{
+        display: grid;
+        width: 70%;
+        grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+        grid-gap: 20px;
+        grid-auto-rows: 45px;
+        margin: 80px 0px 60px 0px;
+        padding: 0 20px;
+    }
+
+    .main .contact_section .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    .main .contact_section .contact .contact-info{
+        width: 80%;
+        height: 450px;
+        padding-top: 20px;
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main .contact_section .contact .contact-info span{
+        font-family: Consolas, monospace;
+        font-size: 30px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .main .contact_section .contact .contact-info .socialmedia_icon i{
+        font-size: 50px;
     }
 
 }
