@@ -152,7 +152,7 @@ body{
 .main .about_section{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     z-index: 1;
     background-color: #f8f8f8;
 }
@@ -439,9 +439,9 @@ background-color: aqua;
     background-color: rgb(2, 2, 63);
 }
 
-.main .contact_section form{
+.main .contact_section .contact form{
     display: grid;
-    width: 50%;
+    width: 55%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
     grid-auto-rows: 45px;
@@ -556,7 +556,23 @@ form input{
     font-size: 20px;
 }
 
+.uparrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: fixed;
+    top: 630px;
+    right: 50px;
+    border-radius: 5px;
+    z-index: 4;
+}
 
+.uparrow i{
+    font-size: 25px;
+}
 
 /* stars animation */
   
@@ -949,7 +965,9 @@ form input{
         font-size: 30px;
     }
     
-
+    .uparrow{
+        display: none;
+    }
 
 }
 
@@ -1094,6 +1112,20 @@ form input{
     .main .contact_section .contact .contact-info .socialmedia_icon i{
         font-size: 50px;
     }
+
+    .uparrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: fixed;
+    top: 95vh;
+    right: 50px;
+    border-radius: 5px;
+    z-index: 4;
+    }
 }
 
 /* breakpoint for medium devices  */
@@ -1144,7 +1176,7 @@ form input{
 
     .main .about_section{
         width: 100vw;
-        height: 100vh;
+        height: 1400px;
     }
 
     .main .about_section .about{
@@ -1156,9 +1188,9 @@ form input{
 
     .main .about_section .about .imageBox{
         width: 70%;
-        height: 60%;
+        height: 40%;
         margin-left: 13%;
-        margin-top: 20px;
+        margin-top: 0px;
         box-shadow: inset 0px 0px 80px 90px rgb(255, 255, 255);
     }
 
@@ -1219,11 +1251,12 @@ form input{
 
     .main .contact_section .contact .contact-info{
         width: 80%;
-        height: 450px;
+        height: 500px;
         padding-top: 20px;
         margin-top: 5px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 30px;
     }
 
     .main .contact_section .contact .contact-info span{
@@ -1235,6 +1268,20 @@ form input{
 
     .main .contact_section .contact .contact-info .socialmedia_icon i{
         font-size: 50px;
+    }
+
+    .uparrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        position: fixed;
+        top: 95vh;
+        right: 50px;
+        border-radius: 5px;
+        z-index: 4;
     }
 
 }
@@ -1300,7 +1347,7 @@ form input{
 
     .main .about_section{
         width: 100vw;
-        height: 100vh;
+        height: 1400px;
     }
 
     .main .about_section .about{
@@ -1320,7 +1367,7 @@ form input{
 
     .main .about_section .about .aboutDetails{
         display: flex;
-        padding-top: 50px;
+        padding-top: 40px;
         padding-left: 40px;
         padding-right: 40px;
         line-height: 27px;
@@ -1397,11 +1444,12 @@ form input{
 
     .main .contact_section .contact .contact-info{
         width: 80%;
-        height: 450px;
+        height: 500px;
         padding-top: 20px;
         margin-top: 5px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 30px;
     }
 
     .main .contact_section .contact .contact-info span{
@@ -1413,6 +1461,20 @@ form input{
 
     .main .contact_section .contact .contact-info .socialmedia_icon i{
         font-size: 50px;
+    }
+
+    .uparrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        position: fixed;
+        top: 95vh;
+        right: 50px;
+        border-radius: 5px;
+        z-index: 4;
     }
 
 }
